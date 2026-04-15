@@ -19,7 +19,8 @@ public class SecurityConfiguration {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.configurationSource(corsConfigurationSource())) // 👈 IMPORTANTE
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().permitAll()
+               .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+               .requestMatchers("/**").permitAll()
             );
 
         return http.build();
