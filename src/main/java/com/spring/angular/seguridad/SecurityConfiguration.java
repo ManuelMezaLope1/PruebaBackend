@@ -31,7 +31,7 @@ public class SecurityConfiguration {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("https://prueba-frontend-qmdh.vercel.app"));
+        config.setAllowedOrigins(List.of("https://prueba-frontend-six.vercel.app/"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
