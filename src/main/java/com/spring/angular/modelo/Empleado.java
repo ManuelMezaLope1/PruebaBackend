@@ -23,21 +23,26 @@ public class Empleado {
     @Column(name="email", nullable = false, length = 60)
     private String email;
 
+    @Column(name="password", nullable = false, length = 60)
+    private String password
+    
     public Empleado(){
 
     }
 
-    public Empleado(Long id, String nombre, String apellido, String email) {
+    public Empleado(Long id, String nombre, String apellido, String email, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
+        this.password = password;
     }
 
-    public Empleado(String nombre, String apellido, String email) {
+    public Empleado(String nombre, String apellido, String email, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
@@ -70,5 +75,13 @@ public class Empleado {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
+    public void setPassword(String password){
+        this.password=password
     }
 }
