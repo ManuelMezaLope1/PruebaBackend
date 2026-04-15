@@ -54,6 +54,7 @@ public class EmpleadoControlador {
         empleado.setNombre(detallesEmpleado.getNombre());
         empleado.setApellido(detallesEmpleado.getApellido());
         empleado.setEmail(detallesEmpleado.getEmail());
+        empleado.setPassword(detallesEmpleado.getPassword());
 
         Empleado empleadoActualizado = repositorio.save(empleado);
         return ResponseEntity.ok(empleadoActualizado);
